@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Location.cpp" />
     <ClCompile Include="Scenario 1.cpp" />
+    <ClCompile Include="Yacht.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Location.h" />
+    <ClInclude Include="Yacht.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

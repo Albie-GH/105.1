@@ -3,38 +3,7 @@
 
 #include <iostream>
 
-class Yacht
-{
-private:
-    int number;
-    class Location
-    {
-    public:
-        int degrees;
-        float minutes;
-        char direction;
 
-    public:
-        void getpos(int degs, float mins, char dir) {
-            std::cout << "Input degrees between 0 and 180: ";
-            std::cin >> degs;
-            std::cout << "Input minutes between 0 and 60: ";
-            std::cin >> mins;
-            std::cout << "Input direction (E/W/N/S): ";
-            std::cin >> dir;
-            degrees = degs;
-            minutes = mins;
-            direction = dir;
-        }
-    };
-    Location locations[2];
-
-public:
-    void print() {
-        std::cout << locations[0].degrees;
-    }
-
-};
 
 
 int main()
