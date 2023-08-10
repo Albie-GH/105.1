@@ -6,7 +6,7 @@
 class Yacht : public Location
 {
 private:
-    int number;
+    int serialNumber;
     Location latitude;
     Location longitude;
 

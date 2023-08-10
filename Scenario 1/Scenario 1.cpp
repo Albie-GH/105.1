@@ -2,13 +2,15 @@
 // Scenario 1
 
 #include <iostream>
+#include "Yacht.h"
+#include "Location.h"
 
 
 
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Yacht yacht1;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

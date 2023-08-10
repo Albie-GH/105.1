@@ -3,12 +3,13 @@
 
 class Location
 {
-protected:
+public:
     int degrees;
     float minutes;
     char direction;
 
 public:
+    Location(int, float, char);
     Location getpos();
 };
 
