@@ -10,7 +10,10 @@
 
 int main()
 {
-    Yacht yacht1;
+    int n = 0;
+    Yacht yacht1(++n);
+    yacht1.get_pos(yacht1);
+    yacht1.print(yacht1);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

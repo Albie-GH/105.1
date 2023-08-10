@@ -3,13 +3,11 @@
 
 class Location
 {
-public:
+public: // Public variables due to use of the 'tempLoc' variable in Yacht::get_pos()
     int degrees;
     float minutes;
     char direction;
-
-public:
-    Location(int, float, char);
+    Location();
     Location getpos();
 };
 

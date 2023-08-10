@@ -11,7 +11,7 @@ private:
     Location longitude;
 
 public:
-    Yacht(int, Location, Location);
+    Yacht(const int);
     void get_pos(Yacht&);
     void print(const Yacht&);
 };

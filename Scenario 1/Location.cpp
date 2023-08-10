@@ -1,22 +1,23 @@
 #include "Yacht.h"
 #include "Location.h"
 #include <iostream>
+#include <cctype>
 
-Location::Location(int degrees, float minutes, char direction) 
-	: degrees(degrees), minutes(minutes), direction(direction) {} // default constructor - is this possible?
+Location::Location() : degrees(0), minutes(0.0f), direction('0') {} // default constructor - is this possible?
 
 Location Location::getpos() {
-	Location tempLoc(0, 0.0, '0');
-	bool validLoc = true;
+	Location tempLoc;
+	bool validLoc = false;
 	do {
 		std::cout << "Input degrees between 0 and 180: ";
 		std::cin >> tempLoc.degrees;
 		if (tempLoc.degrees < 0 || tempLoc.degrees > 180) {
 			validLoc = false;
 			std::cout << "Invalid input. . ." << std::endl << std::endl;
-			break;
 		}
-
+		else {
+			validLoc = true;
+		}
 	} while (!validLoc);
 
 	do {
@@ -25,17 +26,22 @@ Location Location::getpos() {
 		if (tempLoc.minutes < 0 || tempLoc.minutes > 60) {
 			validLoc = false;
 			std::cout << "Invalid input. . ." << std::endl << std::endl;
-			break;
+		}
+		else {
+			validLoc = true;
 		}
 	} while (!validLoc);
 
 	do {
 		std::cout << "Input direction (E/W/N/S): ";
 		std::cin >> tempLoc.direction;
+		tempLoc.direction = std::toupper(tempLoc.direction);
 		if (tempLoc.direction != 'E' && tempLoc.direction != 'W' && tempLoc.direction != 'N' && tempLoc.direction != 'S') {
 			validLoc = false;
 			std::cout << "Invalid input. . ." << std::endl << std::endl;
-			break;
+		}
+		else {
+			validLoc = true;
 		}
 	} while (!validLoc);
 
