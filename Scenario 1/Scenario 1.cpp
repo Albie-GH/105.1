@@ -5,15 +5,33 @@
 #include "Yacht.h"
 #include "Location.h"
 
-
-
-
 int main()
 {
-    int n = 0;
-    Yacht yacht1(++n);
-    yacht1.get_pos(yacht1);
-    yacht1.print(yacht1);
+    int numOfYachts = 0; // variable to store current number of Yacht objects
+    Yacht yachts[3]; // used an array for fixed number of yachts 
+
+    std::cout << "**************Ocean Race 2023-24**************\n\n";
+
+    for (int i = 0; i < 3; i++) {
+        std::cout << "**************************************\n";
+        if (i == 0) {
+            std::cout << "Enter the Location of the first ship:\n";
+        }
+        else if (i == 1) {
+            std::cout << "Enter the Location of the second ship:\n";
+        }
+        else if (i == 2) {
+            std::cout << "Enter the Location of the third ship:\n";
+        }
+        yachts[i] = Yacht(++numOfYachts);
+        yachts[i].get_pos(yachts[i]);
+    }
+
+    std::cout << "**************Welcome to Ocean Race 2023-24**************\n";
+
+    for (int i = 0; i < 3; i++) {
+        yachts[i].print(yachts[i]);
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

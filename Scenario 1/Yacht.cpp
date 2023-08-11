@@ -2,14 +2,14 @@
 #include "Location.h"
 #include <iostream>
 
-Yacht::Yacht(const int serialNumber) : serialNumber(serialNumber) {}
-
-void Yacht::get_pos(Yacht& yacht) {
-	Location tempLoc = Location::getpos();
-	bool isValid = false;
+// Function to input the two locations into the Yacht object
+void Yacht::get_pos(Yacht&) {
+	Location tempLoc = Location::getpos(); // uses a temp variable before assigning to latitude or longitude
+	bool isValid = false; // bool for input validation
 	
+	// determines if a latitude or longitude coordinate has been received then prompts the user for the other
 	if (tempLoc.direction == 'N' || tempLoc.direction == 'S') {
-		yacht.latitude = tempLoc;
+		this->latitude = tempLoc;
 		do {
 			tempLoc = Location::getpos();
 			if (tempLoc.direction != 'E' && tempLoc.direction != 'W') {
@@ -17,13 +17,13 @@ void Yacht::get_pos(Yacht& yacht) {
 				isValid = false;
 			}
 			else {
-				yacht.longitude = tempLoc;
+				this->longitude = tempLoc;
 				isValid = true;
 			}
 		} while (isValid == false);
 	}
 	else {
-		yacht.longitude = tempLoc;
+		this->longitude = tempLoc;
 		do {
 			tempLoc = Location::getpos();
 			if (tempLoc.direction != 'N' && tempLoc.direction != 'S') {
@@ -31,15 +31,16 @@ void Yacht::get_pos(Yacht& yacht) {
 				isValid = false;
 			}
 			else {
-				yacht.latitude = tempLoc;
+				this->latitude = tempLoc;
 				isValid = true;
 			}
 		} while (isValid == false);
 	}
 }
 
+// simple print function
 void Yacht::print(const Yacht&) {
-	std::cout << "The ship serial number is : " << this->serialNumber << std::endl;
+	std::cout << "\nThe ship serial number is : " << this->serialNumber << std::endl;
 	std::cout << "and it's position is : " << this->latitude.degrees << "\xF8" << this->latitude.minutes << " " << this->latitude.direction << " Latitude ";
-	std::cout << this->longitude.degrees << "\xF8" << this->longitude.minutes << " " << this->longitude.direction << " Longitude " << std::endl << std::endl;
+	std::cout << this->longitude.degrees << "\xF8" << this->longitude.minutes << " " << this->longitude.direction << " Longitude " << std::endl;
 }
