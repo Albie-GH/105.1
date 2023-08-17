@@ -5,7 +5,7 @@
 #include "Yacht.h"
 #include "Location.h"
 
-int Yacht::yachtCount = 0; // Initilize static member variable of Yach Count
+int Yacht::yachtCount = 0; // Initilize static member variable of Yacht Count
 
 int main()
 {
@@ -30,11 +30,10 @@ int main()
 
     std::cout << "\n**************Welcome to Ocean Race 2023-24**************\n";
 
-    // loop through and print all yachts locations
+    // loop through and print all yacht's locations
     for (int i = 0; i < 3; i++) {
         yachts[i].print(yachts[i]);
     }
-
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

@@ -11,7 +11,7 @@ Location Location::getpos() {
 	Location tempLoc; // temp variable to return
 	bool validLoc = false; // bool for input validation
 
-	// 3 do-while loops for degrees, minutes and direction inputs with validation checks
+	// 3 while loops for degrees, minutes and direction inputs with validation checks
 	while (!validLoc) {
 		std::cout << "Input degrees between 0 and 180: ";
 		std::cin >> tempLoc.degrees;

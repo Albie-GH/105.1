@@ -7,7 +7,7 @@
 
 // Function to input the two locations into the Yacht object
 void Yacht::get_pos(Yacht&) {
-	Location tempLoc = Location::getpos(); // uses a temp variable before assigning to latitude or longitude
+	Location tempLoc = Location::getpos(); // uses a temporary location variable before assigning to latitude or longitude
 	bool isValid = false; // bool for input validation
 	
 	// determines if a latitude or longitude coordinate has been received then prompts the user for the other
