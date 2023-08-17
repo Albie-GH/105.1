@@ -1,3 +1,6 @@
+// Albie Ng
+// Scenario 1
+
 #include "Yacht.h"
 #include "Location.h"
 #include <iostream>

@@ -11,7 +11,7 @@
 int main()
 {
     int n = 0;
-    Yacht yacht1(++n);
+    Yacht yacht1(Yacht::yachtCount());
     yacht1.get_pos(yacht1);
     yacht1.print(yacht1);
 }
