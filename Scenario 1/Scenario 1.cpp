@@ -5,13 +5,15 @@
 #include "Yacht.h"
 #include "Location.h"
 
+int Yacht::yachtCount = 0; // Initilize static member variable of Yach Count
+
 int main()
 {
-    int numOfYachts = 0; // variable to store current number of Yacht objects
     Yacht yachts[3]; // used an array for fixed number of yachts 
 
     std::cout << "**************Ocean Race 2023-24**************\n\n";
 
+    // loop through each yacht to input locations
     for (int i = 0; i < 3; i++) {
         std::cout << "**************************************\n";
         if (i == 0) {
@@ -23,12 +25,12 @@ int main()
         else if (i == 2) {
             std::cout << "Enter the Location of the third ship:\n";
         }
-        yachts[i] = Yacht(Yacht::yachtcount());
-        yachts[i].get_pos(yachts[i]);
+        yachts[i].get_pos(yachts[i]); // call function to input locations
     }
 
-    std::cout << "**************Welcome to Ocean Race 2023-24**************\n";
+    std::cout << "\n**************Welcome to Ocean Race 2023-24**************\n";
 
+    // loop through and print all yachts locations
     for (int i = 0; i < 3; i++) {
         yachts[i].print(yachts[i]);
     }

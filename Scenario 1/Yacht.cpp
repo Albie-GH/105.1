@@ -48,7 +48,7 @@ void Yacht::print(const Yacht&) {
 	std::cout << this->longitude.degrees << "\xF8" << this->longitude.minutes << " " << this->longitude.direction << " Longitude " << std::endl << std::endl;
 }
 
-int Yacht::yachtCount() {
-	int count = 0;
-	return ++count;
+// returns static member variable Yacht Count
+int Yacht::getYachtCount() {
+	return yachtCount;
 }

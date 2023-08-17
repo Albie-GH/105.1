@@ -12,12 +12,14 @@ private:
     int serialNumber;
     Location latitude;
     Location longitude;
+    static int yachtCount;
 
 public:
-    Yacht(const int serialNumber = 0) : Location(), serialNumber(serialNumber) {}
+    Yacht(const int serialNumber = ++yachtCount) : Location(), serialNumber(serialNumber) {
+    }
     void get_pos(Yacht&);
     void print(const Yacht&);
-    static int yachtCount();
+    static int getYachtCount();
 };
 
 #endif
