@@ -1,3 +1,6 @@
+// Albie Ng
+// Scenario 1
+
 #ifndef LOCATION_H
 #define LOCATION_H
 

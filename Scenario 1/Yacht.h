@@ -1,3 +1,6 @@
+// Albie Ng
+// Scenario 1
+
 #ifndef YACHT_H
 #define YACHT_H
 
@@ -14,6 +17,7 @@ public:
     Yacht(const int serialNumber = 0) : Location(), serialNumber(serialNumber) {}
     void get_pos(Yacht&);
     void print(const Yacht&);
+    static int yachtCount();
 };
 
 #endif

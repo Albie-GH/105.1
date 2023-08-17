@@ -23,7 +23,7 @@ int main()
         else if (i == 2) {
             std::cout << "Enter the Location of the third ship:\n";
         }
-        yachts[i] = Yacht(++numOfYachts);
+        yachts[i] = Yacht(Yacht::yachtcount());
         yachts[i].get_pos(yachts[i]);
     }
 
@@ -32,6 +32,7 @@ int main()
     for (int i = 0; i < 3; i++) {
         yachts[i].print(yachts[i]);
     }
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
