@@ -6,11 +6,12 @@
 #include <iostream>
 #include <cctype>
 
-Location::Location() : degrees(0), minutes(0.0f), direction('0') {} // default constructor - is this possible?
-
+// Function to retrieve and return individaul Location coordinates
 Location Location::getpos() {
-	Location tempLoc;
-	bool validLoc = false;
+	Location tempLoc; // temp variable to return
+	bool validLoc = false; // bool for input validation
+
+	// 3 do-while loops for degrees, minutes and direction inputs with validation checks
 	do {
 		std::cout << "Input degrees between 0 and 180: ";
 		std::cin >> tempLoc.degrees;
